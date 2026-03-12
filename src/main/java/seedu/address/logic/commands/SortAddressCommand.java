@@ -26,7 +26,6 @@ public class SortAddressCommand extends Command {
     @Override
     public CommandResult execute(Model model) {
         requireNonNull(model);
-        model.sortPersonList(ADDRESS_COMPARATOR);
         return new CommandResult(MESSAGE_SUCCESS);
     }
 }
