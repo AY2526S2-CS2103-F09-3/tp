@@ -60,34 +60,23 @@ public class StudentAddressTest {
     @Test
     public void constructor_null_throwsNullPointerException() {
         // Null address should throw NullPointerException
-        org.junit.jupiter.api.Assertions.assertThrows(
-            NullPointerException.class,
-            () -> new StudentAddress(null)
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(NullPointerException.class,
+            () -> new StudentAddress(null));
     }
 
     @Test
     public void constructor_invalidAddress_throwsIllegalArgumentException() {
         // Empty address
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentAddress(EMPTY),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentAddress(EMPTY), MESSAGE_CONSTRAINTS);
 
         // Blank address (spaces only)
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentAddress(BLANK),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentAddress(BLANK), MESSAGE_CONSTRAINTS);
 
         // Whitespace only address
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentAddress(WHITESPACE_ONLY),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentAddress(WHITESPACE_ONLY), MESSAGE_CONSTRAINTS);
     }
 
     @Test

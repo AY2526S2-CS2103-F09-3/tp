@@ -66,55 +66,35 @@ public class StudentEmailTest {
     @Test
     public void constructor_null_throwsNullPointerException() {
         // Null email should throw NullPointerException
-        org.junit.jupiter.api.Assertions.assertThrows(
-            NullPointerException.class,
-            () -> new StudentEmail(null)
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(NullPointerException.class,
+            () -> new StudentEmail(null));
     }
 
     @Test
     public void constructor_invalidEmail_throwsIllegalArgumentException() {
         // Missing @ symbol
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(MISSING_AT),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(MISSING_AT), MESSAGE_CONSTRAINTS);
 
         // Double @ symbol
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(DOUBLE_AT),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(DOUBLE_AT), MESSAGE_CONSTRAINTS);
 
         // Missing local part
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(MISSING_LOCAL_PART),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(MISSING_LOCAL_PART), MESSAGE_CONSTRAINTS);
 
         // Missing domain
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(MISSING_DOMAIN),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(MISSING_DOMAIN), MESSAGE_CONSTRAINTS);
 
         // Missing TLD
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(MISSING_TLD),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(MISSING_TLD), MESSAGE_CONSTRAINTS);
 
         // Email with spaces
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentEmail(WITH_SPACES),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentEmail(WITH_SPACES), MESSAGE_CONSTRAINTS);
     }
 
     @Test

@@ -64,41 +64,27 @@ public class StudentPhoneTest {
     @Test
     public void constructor_null_throwsNullPointerException() {
         // Null phone should throw NullPointerException
-        org.junit.jupiter.api.Assertions.assertThrows(
-            NullPointerException.class,
-            () -> new StudentPhone(null)
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(NullPointerException.class,
+            () -> new StudentPhone(null));
     }
 
     @Test
     public void constructor_invalidPhone_throwsIllegalArgumentException() {
         // 3-digit phone (too short)
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentPhone(THREE_DIGITS),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentPhone(THREE_DIGITS), MESSAGE_CONSTRAINTS);
 
         // 16-digit phone (too long)
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentPhone(SIXTEEN_DIGITS),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentPhone(SIXTEEN_DIGITS), MESSAGE_CONSTRAINTS);
 
         // Phone with letters
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentPhone(WITH_LETTERS),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentPhone(WITH_LETTERS), MESSAGE_CONSTRAINTS);
 
         // Phone with symbols
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentPhone(WITH_SYMBOLS),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentPhone(WITH_SYMBOLS), MESSAGE_CONSTRAINTS);
     }
 
     @Test

@@ -66,55 +66,35 @@ public class StudentNameTest {
     @Test
     public void constructor_null_throwsNullPointerException() {
         // Null name should throw NullPointerException
-        org.junit.jupiter.api.Assertions.assertThrows(
-            NullPointerException.class,
-            () -> new StudentName(null)
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(NullPointerException.class,
+            () -> new StudentName(null));
     }
 
     @Test
     public void constructor_invalidName_throwsIllegalArgumentException() {
         // Empty name
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(EMPTY),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(EMPTY), MESSAGE_CONSTRAINTS);
 
         // Blank name (spaces only)
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(BLANK),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(BLANK), MESSAGE_CONSTRAINTS);
 
         // Name with numbers
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(CONTAINS_NUMBER),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(CONTAINS_NUMBER), MESSAGE_CONSTRAINTS);
 
         // Name with symbols
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(CONTAINS_SYMBOL),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(CONTAINS_SYMBOL), MESSAGE_CONSTRAINTS);
 
         // Name with asterisk
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(ASTERISK),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(ASTERISK), MESSAGE_CONSTRAINTS);
 
         // Name with leading whitespace
-        org.junit.jupiter.api.Assertions.assertThrows(
-            IllegalArgumentException.class,
-            () -> new StudentName(LEADING_WHITESPACE),
-            MESSAGE_CONSTRAINTS
-        );
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class,
+            () -> new StudentName(LEADING_WHITESPACE), MESSAGE_CONSTRAINTS);
     }
 
     @Test
