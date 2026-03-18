@@ -33,6 +33,8 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
    * `delete 3` : Deletes the 3rd contact shown in the current list.
 
    * `clear` : Deletes all contacts.
+   
+   * `sort` : Sort all contacts in alphabetical order.
 
    * `exit` : Exits the app.
 
@@ -92,6 +94,12 @@ Examples:
 Shows a list of all persons in the address book.
 
 Format: `list`
+
+### Sorting all persons : `sort`
+
+Shows a list of all persons in the address book in alphabetical order.
+
+Format: `sort`
 
 ### Editing a person : `edit`
 
