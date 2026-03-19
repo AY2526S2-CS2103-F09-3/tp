@@ -154,6 +154,16 @@ Examples:
 * `find alex david` returns `Alex Yeoh`, `David Li`<br>
   ![result for 'find alex david'](images/findAlexDavidResult.png)
 
+### Adding a tag cumulatively: `tag`
+
+Adds one or more specified tags to a given person.
+
+Format: `tag INDEX \t[TAG] [t/MORE_TAGS]…`
+
+Examples:
+* `tag 2 t\support` Adds the tag `support` to the 2nd person's existing tags.
+* `tag 5 t\exco t\hons` Adds the tags `exco` and `hons` to the 5th person's existing tags.
+
 ### Deleting a person : `delete`
 
 Deletes the specified person from the address book.
@@ -223,5 +233,6 @@ Action | Format, Examples
 **Edit** | `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/CLASS] [t/TAG]…​`<br> e.g., `edit 2 n/James Lee e/jameslee@example.com`
 **Filter** | `filter c/CLASS`<br> e.g., `filter c/3A`
 **Find** | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`
+**Tag** | `tag INDEX t/TAG [t/MORE_TAGS]`<br> e.g., `tag 1 t/exco`
 **List** | `list`
 **Help** | `help`
